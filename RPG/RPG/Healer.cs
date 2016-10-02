@@ -14,12 +14,14 @@ namespace ConsoleApplication1
         public void Attack(Hero h1)
         {
             Random rnd = new Random();
-            int dmg = rnd.Next(5, 20);
+            dmg = rnd.Next(5, 20);
             h1.HP -= dmg;
         }
-         public Healer()
+        public Healer()
         {
+            if(cd == 0)
             base.HP = 75;
+
         }
     } 
 }

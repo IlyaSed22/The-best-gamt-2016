@@ -7,11 +7,14 @@ namespace ConsoleApplication1
 {
     public class Hero
     {
-        public int HP;
+        public double HP;
         public virtual void Attack(Hero h1)
         {
             
         }
+        public double dmg;
+        public int cd = 0;
+        public int during = 2;
     }
 }
 

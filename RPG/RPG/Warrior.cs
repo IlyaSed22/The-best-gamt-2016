@@ -16,7 +16,7 @@ namespace ConsoleApplication1
         public override void Attack(Hero h1)
         {
             Random rnd = new Random();
-            int dmg = rnd.Next(35, 40);
+            dmg = rnd.Next(35, 40);
             h1.HP -= dmg;
         }
     }

@@ -7,26 +7,8 @@ namespace ConsoleApplication1
 {
     public static class GameLogical
     {
-        //public static void Fight(Hero h1, Hero h2)
-        //{
-        //    switch (classOfPerson)
-        //    {
-        //        case "warrior":
-        //            Warrior war = new Warrior();
-        //            break;
-        //        case "healer":
-        //            Healer healer = new Healer();
-        //            break;
-        //    }
-        //    switch (classOfEnemy)
-        //    {
-        //        case "monster":
-        //            Monster monster = new Monster();
-        //            break;
-        //    }
-        //}
-    }
-    
+        
+    }    
     class Program
     {
         static void Main(string[] args)
@@ -38,18 +20,10 @@ namespace ConsoleApplication1
             Mage MY = new Mage();
             while (x == 0)
             {
-                //if (WY.HP <= 0)
-                //{
-                //    Console.WriteLine("Ваш воин погиб, а жрец долго не продержится( Попробуйте снова");
-                //    x++;
-                //    break;
-                //}
-                //if (WY.HP <= 0)
-                //{
-                //    Console.WriteLine("Ваш воин погиб, а жрец долго не продержится( Попробуйте снова");
-                //    x++;
-                //    break;
-                //}
+                if(HY.cd > 0)
+                HY.cd--;
+                if(MY.cd > 0)
+                MY.cd--;
                 if (EM.HP <= 0)
                 {
                     Console.WriteLine("Ты победил монстра!");
@@ -92,12 +66,23 @@ namespace ConsoleApplication1
                             int HDo = int.Parse(Console.ReadLine());
                             if (HDo == 1)
                             {
-                                HY.Heal(WY);
-                                if (WY.HP > 150)
+                                if (HY.cd == 0)
                                 {
-                                    WY.HP = 150;
+                                    HY.cd += 2;
+                                    Console.WriteLine("Кого лечить?");
+                                    Console.WriteLine("1) Воин");
+                                    Console.WriteLine("2) Маг");
+                                    int babuin = int.Parse(Console.ReadLine());
+                                    switch (babuin)
+                                    {
+                                        case 1:
+                                            HY.Heal(WY);
+                                            break;
+                                        case 2:
+                                            HY.Heal(MY);
+                                            break;
+                                    }
                                 }
-                                Console.WriteLine("Ваши жизни Воина - " + WY.HP);
                             }
                             if (HDo == 2)
                             {
@@ -113,12 +98,44 @@ namespace ConsoleApplication1
                         break;
                     case 3:
                         {
-                            if (MY.HP >= 0)
+                            if (MY.HP != 0)
                             {
-                                MY.Attack(EM);
-                                EM.Attack(MY);
-                                Console.WriteLine("Вы атаковали монстра! Его жизни - " + EM.HP);
-                                Console.WriteLine("Ваши жизни Мага - " + MY.HP);
+                                Console.WriteLine("Что вы хотите сделать?");
+                                Console.WriteLine("1) Увеличить урон союзнику");
+                                Console.WriteLine("2) Ударить");
+                                int HDo = int.Parse(Console.ReadLine());
+                                if (HDo == 1)
+                                {
+                                    if (MY.cd == 0)
+                                    {
+                                        Console.WriteLine("Кого баффать?");
+                                        Console.WriteLine("1) Воин");
+                                        Console.WriteLine("2) Жрец");
+                                        int babuinchik = int.Parse(Console.ReadLine());
+                                        switch (babuinchik)
+                                        {
+                                            case 1:
+                                                MY.PlusAttack(WY);                                                
+                                                break;
+                                            case 2:
+                                                MY.PlusAttack(HY);
+                                                break;
+                                        }
+                                    }
+                                    if(MY.cd != 0)
+                                    {
+                                        Console.WriteLine("У вас кд. Вы получаете урон");
+                                        EM.Attack(WY);
+                                        EM.Attack(HY);
+                                        EM.Attack(WY);
+                                    }                                    
+                                }
+                                if (HDo == 2)
+                                {
+                                    MY.Attack(EM);
+                                    Console.WriteLine("Вы атаковали монстра! Его жизни - " + EM.HP);
+                                    Console.WriteLine("Ваши жизни Мага - " + MY.HP);
+                                }
                             }
                             else
                             {

@@ -10,14 +10,13 @@ namespace ConsoleApplication1
         public override void Attack(Hero h1)
         {
             Random rnd = new Random();
-            int dmg = rnd.Next(20, 70);
+            dmg = rnd.Next(20, 70);
             h1.HP -= dmg;
         }
 
         public Monster()
         {
             base.HP = 200;
-
         }
     }
 }
