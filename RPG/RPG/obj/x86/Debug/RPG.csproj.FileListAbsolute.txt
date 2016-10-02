@@ -1,0 +1,15 @@
+C:\Users\ISedojkin.INFORMATICS\documents\visual studio 2010\Projects\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\ISedojkin.INFORMATICS\documents\visual studio 2010\Projects\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\ISedojkin.INFORMATICS\documents\visual studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.exe
+C:\Users\ISedojkin.INFORMATICS\documents\visual studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.pdb
+C:\Users\ISedojkin.INFORMATICS\Documents\Visual Studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.csprojResolveAssemblyReference.cache
+C:\Users\VovAN\Documents\Visual Studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.exe
+C:\Users\VovAN\Documents\Visual Studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.pdb
+C:\Users\VovAN\Documents\Visual Studio 2010\Projects\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\VovAN\Documents\Visual Studio 2010\Projects\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\VovAN\Documents\Visual Studio 2010\Projects\RPG\RPG\obj\x86\Debug\RPG.csprojResolveAssemblyReference.cache
+C:\Users\ISedojkin.INFORMATICS\Documents\GitHub\The-best-gamt-2016\RPG\RPG\obj\x86\Debug\RPG.exe
+C:\Users\ISedojkin.INFORMATICS\Documents\GitHub\The-best-gamt-2016\RPG\RPG\obj\x86\Debug\RPG.pdb
+C:\Users\ISedojkin.INFORMATICS\Documents\GitHub\The-best-gamt-2016\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\ISedojkin.INFORMATICS\Documents\GitHub\The-best-gamt-2016\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\ISedojkin.INFORMATICS\Documents\GitHub\The-best-gamt-2016\RPG\RPG\obj\x86\Debug\RPG.csprojResolveAssemblyReference.cache
