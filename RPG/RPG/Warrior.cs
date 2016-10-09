@@ -19,5 +19,6 @@ namespace ConsoleApplication1
             dmg = rnd.Next(35, 40);
             h1.HP -= dmg;
         }
+
     }
 }

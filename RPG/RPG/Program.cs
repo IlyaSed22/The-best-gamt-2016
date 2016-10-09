@@ -5,21 +5,22 @@ using System.Text;
 
 namespace ConsoleApplication1
 {
-    public static class GameLogical
-    {
-        
-    }    
     class Program
     {
         static void Main(string[] args)
         {
+            List<Hero> Heros = new List<Hero>();
             int x = 0;
             Warrior WY = new Warrior();
             Healer HY = new Healer();
             Monster EM = new Monster();
             Mage MY = new Mage();
+            Heros.Add(WY);
+            Heros.Add(HY);
+            Heros.Add(MY);
             while (x == 0)
             {
+                GameLogical.MinusBaff(Heros);
                 if(HY.cd > 0)
                 HY.cd--;
                 if(MY.cd > 0)
@@ -31,18 +32,18 @@ namespace ConsoleApplication1
                     break;
                 }
                 Console.WriteLine("Выберите перонажа:");
-                if(WY.HP >= 0)
+                if(WY.HP > 0)
                     Console.WriteLine("1) Воин HP - " + WY.HP);
-                if(HY.HP >= 0)
+                if(HY.HP > 0)
                     Console.WriteLine("2) Жрец HP - " + HY.HP);
-                if (MY.HP >= 0)
-                    Console.WriteLine("3) Маг HP - " + MY.HP);
+                if (MY.HP > 0)
+                    Console.WriteLine("3) Маг HP - " + MY.HP + "  КД = " + MY.cd);
                 int a = int.Parse(Console.ReadLine());
                 switch (a)
                 {
                     case 1:
                         {
-                            if (WY.HP >= 0)
+                            if (WY.HP > 0)
                             {
                                 WY.Attack(EM);
                                 EM.Attack(WY);
@@ -58,7 +59,7 @@ namespace ConsoleApplication1
                         }
                         break;
                     case 2:
-                        if (HY.HP >= 0)
+                        if (HY.HP > 0)
                         {
                             Console.WriteLine("Что вы хотите сделать?");
                             Console.WriteLine("1) Восстановить жизни союзнику");
@@ -106,6 +107,13 @@ namespace ConsoleApplication1
                                 int HDo = int.Parse(Console.ReadLine());
                                 if (HDo == 1)
                                 {
+                                    if(MY.cd > 0)
+                                    {
+                                        Console.WriteLine("У вас кд. Вы получаете урон");
+                                        EM.Attack(WY);
+                                        EM.Attack(HY);
+                                        EM.Attack(WY);
+                                    }              
                                     if (MY.cd == 0)
                                     {
                                         Console.WriteLine("Кого баффать?");
@@ -122,13 +130,7 @@ namespace ConsoleApplication1
                                                 break;
                                         }
                                     }
-                                    if(MY.cd != 0)
-                                    {
-                                        Console.WriteLine("У вас кд. Вы получаете урон");
-                                        EM.Attack(WY);
-                                        EM.Attack(HY);
-                                        EM.Attack(WY);
-                                    }                                    
+                                                          
                                 }
                                 if (HDo == 2)
                                 {
@@ -144,6 +146,24 @@ namespace ConsoleApplication1
                                 EM.Attack(HY);
                             }
                         }
+                        break;
+                }
+            }
+            
+        }
+        public void start()
+        {
+            for (int ikk = 0; ikk < 0; ikk++)
+            {
+                Console.WriteLine("Выбери персонажа");
+                Console.WriteLine("1) Воин");
+                Console.WriteLine("2) Жрец");
+                Console.WriteLine("3) Маг");
+                int jjjjj = int.Parse(Console.ReadLine());
+                switch(jjjjj)
+                {
+                    case 1:
+                        
                         break;
                 }
             }
