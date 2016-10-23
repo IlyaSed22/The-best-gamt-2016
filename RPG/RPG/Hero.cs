@@ -7,6 +7,7 @@ namespace ConsoleApplication1
 {
     public class Hero
     {
+        public List<Hero> Heroes = new List<Hero>
         public bool HaveBaff;
         public virtual void Attack(Hero h1)
         {

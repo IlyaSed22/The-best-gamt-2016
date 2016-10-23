@@ -24,5 +24,22 @@ namespace ConsoleApplication1
                 }
             }
         }
+        public void start()
+        {
+            for (int ikk = 0; ikk < 3; ikk++)
+            {
+                Console.WriteLine("Выбери персонажа");
+                Console.WriteLine("1) Воин");
+                Console.WriteLine("2) Жрец");
+                Console.WriteLine("3) Маг");
+                int jjjjj = int.Parse(Console.ReadLine());
+                switch (jjjjj)
+                {
+                    case 1:
+
+                        break;
+                }
+            }
+        }
     }
 }

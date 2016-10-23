@@ -7,20 +7,21 @@ namespace ConsoleApplication1
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            List<Hero> Heros = new List<Hero>();
+            List<Hero> Heroes = new List<Hero>;
             int x = 0;
             Warrior WY = new Warrior();
             Healer HY = new Healer();
             Monster EM = new Monster();
             Mage MY = new Mage();
-            Heros.Add(WY);
-            Heros.Add(HY);
-            Heros.Add(MY);
+            Heroes.Add(WY);
+            Heroes.Add(HY);
+            Heroes.Add(MY);
             while (x == 0)
             {
-                GameLogical.MinusBaff(Heros);
+                GameLogical.MinusBaff(Heroes);
                 if(HY.cd > 0)
                 HY.cd--;
                 if(MY.cd > 0)
@@ -151,22 +152,6 @@ namespace ConsoleApplication1
             }
             
         }
-        public void start()
-        {
-            for (int ikk = 0; ikk < 0; ikk++)
-            {
-                Console.WriteLine("Выбери персонажа");
-                Console.WriteLine("1) Воин");
-                Console.WriteLine("2) Жрец");
-                Console.WriteLine("3) Маг");
-                int jjjjj = int.Parse(Console.ReadLine());
-                switch(jjjjj)
-                {
-                    case 1:
-                        
-                        break;
-                }
-            }
-        }
+        
     }
 }
